@@ -1,9 +1,9 @@
-#include <iostream>
+#include "func.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World\n";
+    print;
     return 0;
 }
