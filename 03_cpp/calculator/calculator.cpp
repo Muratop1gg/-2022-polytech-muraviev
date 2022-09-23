@@ -1,40 +1,8 @@
 #include <iostream>
 #include <math.h>
+#include "result.cpp"
+
 using namespace std;
-
-
-
-
-int in(float a, char sign, float b)
-{
-	if (sign == '+')
-	{
-		cout << a + b << endl;
-	}
-	else
-		if (sign == '-')
-		{
-			cout << a - b << endl;
-		}
-		else
-			if (sign == '*')
-			{
-				cout << a * b << endl;
-			}
-			else
-				if (sign == '/')
-				{
-					cout << a / b << endl;
-				}
-				else
-					if (sign == '^')
-					{
-						cout << pow(a, b) << endl;
-					}
-	return 0;
-}
-
-
 
 int main()
 {
@@ -47,7 +15,7 @@ int main()
 
 		cout << "type the equation" << endl;
 		cin >> a >> sign >> b;
-		in(a, sign, b);
+		result(a, sign, b);
 	}
 
 }
