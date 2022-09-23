@@ -1,9 +1,9 @@
-#include "func.h"
-
-using namespace std;
+#include "func.cpp"
+#include <Windows.h>
 
 int main()
 {
-    print;
+    print();
+    system("pause");
     return 0;
 }
