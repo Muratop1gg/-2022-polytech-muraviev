@@ -1,0 +1,12 @@
+Linesearch run time:
+1. 0.299 sec
+2. 0.290 sec
+3. 0.256 sec
+4. 0.287 sec
+5. 0.253 sec
+Doublesearch run time:
+1. 0.191 sec
+2. 0.278 sec
+3. 0.281 sec
+4. 0.231 sec
+5. 0.278 sec
