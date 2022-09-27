@@ -15,22 +15,6 @@ int search(int arr[], int n, int x, int result[])
     }
     return b;
 }
-/*
-int doublesearch(int arr[], int n, int key)
-{
-	int x = 0;
-	int mid;
-	bool flag = false;
-	while ((x <= n) && (flag != true)) {
-		mid = (x + n) / 2;
-
-		if (arr[mid] == key) flag = true; 
-		if (arr[mid] > key) n = mid - 1; 
-		else x = mid + 1;
-	}
-	return mid;
-}
-*/
 
 
 int main()
