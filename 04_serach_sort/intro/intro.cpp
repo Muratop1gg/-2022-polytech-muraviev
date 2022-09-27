@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int linesearch(int arr[], int x, int b, int key)
+int linesearch(int arr[], int n, int key)
 {
-	for (x; x <= b; x++)
+	for (int x = 0; x < n; x++)
 	{
 		if (key == arr[x])
 		{
@@ -16,18 +16,15 @@ int linesearch(int arr[], int x, int b, int key)
 	return -1;
 }
 
-int doublesearch(int arr[], int x, int b, int key)
+int doublesearch(int arr[], int l, int r, int x)
 {
-	int mid;
-	bool flag = false;
-	while ((x <= b) && (flag != true)) {
-		mid = (x + b) / 2; // считываем срединный индекс отрезка [l,r]
-
-		if (arr[mid] == key) flag = true; //проверяем ключ со серединным элементом
-		if (arr[mid] > key) b = mid - 1; // проверяем, какую часть нужно отбросить
-		else x = mid + 1;
-	}
-	return mid;
+	if (r >= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x)
+            return mid;
+        if (arr[mid] > x)
+            return doublesearch(arr, l, mid - 1, x);
+        return doublesearch(arr, mid + 1, r, x);
 }
 
 
@@ -39,7 +36,8 @@ int main()
 		-79, -11, 21, 26, 48, 68, 69, 72, 93, 95, 99, 115, 120, 156, 164, 181, 200, 231, 252, 288,
 		304, 336, 343, 364, 402, 419, 486, 546, 584, 595, 596, 606, 627, 636, 666, 666, 683, 701,
 		740, 766, 780, 782, 794, 802, 829, 832, 837, 858, 875, 881, 882, 883, 883, 947, 959};
-	cout << doublesearch(mas, 0, 100, 120) << endl;
-	cout << clock()/1000.0;
+	int n = sizeof(mas) / sizeof(mas[0]);
+	cout << doublesearch(mas, 0, n - 1, 120) << endl;
+	cout << clock() / 1000.0;
 
 }
