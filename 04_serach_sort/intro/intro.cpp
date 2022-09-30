@@ -18,15 +18,17 @@ int linesearch(int arr[], int n, int key)
 
 int doublesearch(int arr[], int l, int r, int x)
 {
-	if (r >= l) {
+	if (r >= l) 
+	{
         int mid = l + (r - l) / 2;
         if (arr[mid] == x)
             return mid;
         if (arr[mid] > x)
             return doublesearch(arr, l, mid - 1, x);
         return doublesearch(arr, mid + 1, r, x);
+	}
+	return -1;
 }
-
 
 int main()
 {
