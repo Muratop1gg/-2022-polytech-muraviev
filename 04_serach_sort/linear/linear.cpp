@@ -5,7 +5,7 @@ using namespace std;
 int search(int arr[], int n, int x, int result[])
 {
     int b = 0;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i <= n; i++)
     {
         if (arr[i] == x)
         {
@@ -26,7 +26,7 @@ int main()
     {
         result[i] = 0;
     }
-    cout << "Count" << search(mas, arrsize, 19, result) << endl << "Results ID : " << endl; // выводим количество найденных элементов и их номера
+    cout << "Count: " << search(mas, arrsize, 19, result) << endl << "Results ID : " << endl; // выводим количество найденных элементов и их номера
     for (int i = 0; i < arrsize; ++i)
     {
         cout << result[i] << endl;
