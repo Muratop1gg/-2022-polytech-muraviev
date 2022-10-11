@@ -52,6 +52,6 @@ int main()
     int arr[10];
     int n = sizeof(arr) / sizeof(arr[0]);
     fill_array_random(arr, n, 0, 100);
-    print_array(arr, n, false);
+    print_array(arr, n, true);
     return 0;
 }
