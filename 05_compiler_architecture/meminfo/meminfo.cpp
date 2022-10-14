@@ -2,13 +2,12 @@
 #include <fstream>
 #include <string>
 
-
 using namespace std;
 
 
 double freespacecounter(string file)
 {
-	string getcontent;
+	string getcontent;	
 	ifstream openfile(file);
 	int MemTotal, MemFree;
 	if (openfile.is_open())
