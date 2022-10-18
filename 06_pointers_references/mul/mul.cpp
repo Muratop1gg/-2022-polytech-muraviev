@@ -83,14 +83,14 @@ const char* int_to_str(int a) // преобразование int в str
 }
 
 
-int pre_mul(const char* a, const char* b) // возвращает результат сложения в виде int
+int pre_mul(const char* a, const char* b) // возвращает результат произведения в виде int
 {
-    int res = convert(a) + convert(b);
+    int res = convert(a) * convert(b);
     return res;
 }
 
 
-const char* mul(const char* a, const char* b) // возвращает результат сложения в виде строки
+const char* mul(const char* a, const char* b) // возвращает результат произведения в виде строки
 {
     return int_to_str(pre_mul(a, b));
 }
@@ -98,6 +98,6 @@ const char* mul(const char* a, const char* b) // возвращает резул
 
 int main()
 {
-    std::cout << mul("-100", "-1000") << endl;
+    std::cout << mul("-200", "-45") << endl;
     return 0;
 }
