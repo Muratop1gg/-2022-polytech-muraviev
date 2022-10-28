@@ -14,7 +14,12 @@ unsigned int length(const char* str)
     }
     else
     {
-        return strlen(str);
+        int size = 0;
+        while (*str++)
+        {
+            size++;
+        }
+        return size;
     }
 }
 

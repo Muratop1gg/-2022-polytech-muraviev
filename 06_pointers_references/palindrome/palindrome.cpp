@@ -1,9 +1,26 @@
 ﻿#include <cassert>
 #include <iostream>
-#include <string>
 
 
 using namespace std;
+
+
+unsigned int length(const char* str)
+{
+    if (str == nullptr)
+    {
+        return 0;
+    }
+    else
+    {
+        int size = 0;
+        while (*str++)
+        {
+            size++;
+        }
+        return size;
+    }
+}
 
 
 bool test(const char* str)
@@ -14,13 +31,25 @@ bool test(const char* str)
     }
     else
     {
-        if ((strlen(str) / 2 == 1) && (strlen(str) % 2 == 0))
+        if (length(str) % 2 == 0)
         {
-            return false;
+            int a = length(str);
+            for (int i = 0; i < (a / 2); i++)
+            {
+                if (str[a / 2 - 1 - i] == str[a / 2 + i])
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
         }
         else
         {
-            int a = strlen(str);
+            int a = length(str);
             for (int i = 0; i < (a / 2); i++)
             {
                 if (str[a / 2 - i] == str[a / 2 + i])
@@ -49,5 +78,7 @@ int main()
     assert(test("потоп") == true);
     assert(test(nullptr) == false);
     assert(test("довод") == true);
+    assert(test("абввба") == true);
+    assert(test("йцукенггнекуцй") == true);
     return 0;
 }

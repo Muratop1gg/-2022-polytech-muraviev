@@ -98,6 +98,6 @@ const char* mul(const char* a, const char* b) // возвращает резул
 
 int main()
 {
-    std::cout << mul("-200", "-45") << endl;
+    std::cout << mul("200", "-45") << endl;
     return 0;
 }
