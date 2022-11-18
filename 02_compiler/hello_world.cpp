@@ -1,9 +1,8 @@
-#include "func.cpp"
-#include <Windows.h>
+#include <iostream>
+#include "func.h"
 
 int main()
 {
     print();
-    system("pause");
     return 0;
 }

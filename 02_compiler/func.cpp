@@ -1,7 +1,5 @@
 #include <iostream>
-using namespace std;
-
 void print()
 {
-    cout << "Hello World" << endl;
+    std::cout << "Hello World!" << std::endl;
 }
