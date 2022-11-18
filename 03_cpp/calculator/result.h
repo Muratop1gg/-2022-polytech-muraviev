@@ -1,0 +1,1 @@
+int result(float a, char sign, float b);

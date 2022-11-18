@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include "result.cpp"
+#include "result.h"
 
 using namespace std;
 
