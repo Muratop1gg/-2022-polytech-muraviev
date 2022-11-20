@@ -1,5 +1,5 @@
 # Time results
-    ```
+```
     -O0: real    0m0.549s
          user    0m0.545s
          sys     0m0.000s
@@ -31,10 +31,10 @@
     -Oz: real    0m0.651s
          user    0m0.646s
          sys     0m0.000s
-    ```
+```
 
 # Size results
-    ```
+```
     -O0: 17KB
     -O1: 17KB
     -O2: 17KB
@@ -43,4 +43,4 @@
     -Ofast: 18KB
     -Og: 17KB
     -Oz: 17KB
-    ```
+```
